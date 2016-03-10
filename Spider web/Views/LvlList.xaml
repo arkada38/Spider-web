@@ -1,0 +1,25 @@
+﻿<Page x:Class="Spider_web.Views.LvlList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:Spider_web.Views"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:models="using:Spider_web.Models"
+      mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Center">
+        <GridView Margin="5"
+                  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                  IsItemClickEnabled="True"
+                  ItemClick="OnLvlClick"
+                  ItemsSource="{x:Bind _lvlsList}"
+                  SelectionMode="Single">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="models:UserLvl">
+                    <local:LvlTemplate />
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+
+</Page>

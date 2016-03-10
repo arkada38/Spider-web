@@ -1,0 +1,36 @@
+﻿<Page x:Class="Spider_web.Views.SquareView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:Spider_web.Views"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      SizeChanged="OnSquareSizeChanged"
+      mc:Ignorable="d">
+
+    <RelativePanel x:Name="Panel" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Canvas x:Name="MainCanvas"
+                RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.AlignTopWithPanel="True"
+                Background="AntiqueWhite" />
+        
+        <Canvas x:Name="ContactsCanvas"
+                RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.AlignTopWithPanel="True" />
+
+        <Canvas x:Name="SpiderCanvas"
+                PointerCanceled="OnPointerCanceled"
+                PointerCaptureLost="OnPointerCanceled"
+                PointerExited="OnPointerCanceled"
+                PointerMoved="OnPointerMoved"
+                PointerPressed="OnPointerPressed"
+                PointerReleased="OnPointerReleased"
+                RelativePanel.AlignBottomWithPanel="True"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                RelativePanel.AlignTopWithPanel="True" Background="#00000000" />
+    </RelativePanel>
+</Page>
